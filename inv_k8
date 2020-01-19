@@ -1,0 +1,4 @@
+[kubernetes]
+kubem ansible_host=k8master
+kubew1 ansible_host=k8worker1
+kubew2 ansible_host=k8worker2

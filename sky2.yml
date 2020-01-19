@@ -1,0 +1,11 @@
+--- #This is bootstrap for skynet servers
+- hosts: sky2
+  become: yes
+  tasks: 
+  - name: uninstall apache2 on skynet2 servers
+#this has to then start with the module name "apt G" 
+    apt :
+      name: apache2
+      state: absent
+      autoremove: yes
+      
