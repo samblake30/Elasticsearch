@@ -1,0 +1,28 @@
+--- #This playbook file is for installtion of elasticsearch on master and data nodes
+- hosts: elastic
+  become: yes
+  environment:
+    http_proxy: http://10.159.0.3:8678
+    https_proxy: http://10.159.0.3:8678
+  tasks:
+  - name: Creating new file for elasticsearch download
+    copy:
+      src: /home/ansible/elasticsearch/elastic_stack.repo
+      dest: /etc/yum.repos.d/elastic_stack.repo
+      owner: root
+      group: root
+      mode: '0644'
+  - name: Download the java and elasticsearch repo/packages
+    yum:
+      name: "{{ packages }}"
+    vars:
+      packages:
+      - java-1.8.0-openjdk
+      - elasticsearch
+  - name: Now to reload daemon for the changes in configuration
+    command: systemctl daemon-reload 
+  - name: Enable , start and check status or elasticsearch
+    shell: "systemctl {{ item }} elasticsearch"
+    with_items:
+      - enable
+      - start
