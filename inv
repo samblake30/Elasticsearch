@@ -1,3 +1,0 @@
-[skynet]
-sky1 ansible_host=skynet1
-sky2 ansible_host=skynet2
