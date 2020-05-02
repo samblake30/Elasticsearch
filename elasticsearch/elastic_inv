@@ -1,0 +1,4 @@
+[elastic]
+elkm ansible_host=elkmaster
+elkd1 ansible_host=elkdata1
+elkd2 ansible_host=elkdata2

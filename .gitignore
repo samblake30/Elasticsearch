@@ -1,0 +1,18 @@
+#ignore files with .extensions in start
+
+.bash_aliases
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.elinks/
+.k8_root.yml.swp
+.lesshst
+.on-login.sh
+.profile
+.proxy.conf.swp
+.selected_editor
+.ssh/
+.viminfo
+.viminfo.tmp
+
