@@ -1,0 +1,10 @@
+---
+client:
+  hosts:
+    - elkmaster
+  port: 9200
+
+logging:
+  loglevel: INFO
+  logfile: /var/log/elasticsearch/curator.log
+#  logformat: json
